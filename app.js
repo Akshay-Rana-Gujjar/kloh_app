@@ -1,28 +1,24 @@
 const express = require("express");
 const path = require("path");
 const dotenv = require("dotenv").config();
-
 const app = express();
+const routes = require("./route/index");
+const bodyParser = require("body-parser");
 
-// use pug as template engine
+// use pug as template engine, server-side rendering
 app.set("view engine", "pug");
 
 // set views directory for pug to convert pug file to HTML
 app.set("views", path.join(__dirname, "views"));
 
 // set static file path 
-app.set(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
-// set local variables
-app.locals.API_GET = process.env.KLOH_API_GET_URL;
-app.locals.POST_API = process.env.KLOH_API_POST_URL;
+// parse json from request
+app.use(bodyParser.json())
 
+app.use("/" , routes);
 
-
-app.get("/", function(req, res){
-	
-	res.render("lists", {name : "akshay"});
-});
 app.listen("3000", function(){
 	console.log("server running!! :D");
 });

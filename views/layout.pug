@@ -1,8 +1,23 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="en" ng-app="KlohApp")
   include ./includes/head
+  block css
+    link(rel="stylesheet", href="/stylesheets/app.css")
 
   body
+    nav
+      .nav-wrapper.nav-background
+        .container
+          a.brand-logo(href='/') 
+            img.nav-logo-image(src="https://kloh.in/images/logo-kloh-header.jpg", alt="Kloh")
+          ul#nav-mobile.right.hide-on-med-and-down
+            li
+              a(href='#') Events
+            li
+              a(href='#') Blog
+            li
+              a(href='#') Login
+
     .container
       block content
 

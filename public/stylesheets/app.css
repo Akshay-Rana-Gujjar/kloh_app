@@ -1,0 +1,15 @@
+.nav-background{
+  background: #06c8a3;
+}
+
+.nav-logo-image{
+  height:60px
+}
+.card .card-image .card-title{
+
+  padding: 24px 0 0 10px
+}
+.card .card-image .card-title h5{
+  font-weight: 700;
+  text-shadow: 1px 1px #0000009c;
+}
