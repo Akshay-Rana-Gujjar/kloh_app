@@ -1,0 +1,11 @@
+## Node modules ##
+node_modules/
+
+## IDE files
+.vscode/
+
+## env variables files
+.env
+
+
+package-lock.json

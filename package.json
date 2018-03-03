@@ -1,0 +1,14 @@
+{
+  "name": "kloh_app",
+  "version": "1.0.0",
+  "description": "Testing kloh app",
+  "main": "app.js",
+  "scripts": {},
+  "author": "Akshay Rana Gujjar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}
