@@ -5,7 +5,7 @@
 <p>Follow theses steps to run this project</p>
 
 <ol>
-<li>clone this repo by using <code><pre>git clone <repo-name></pre></code></li>
+<li>clone this repo by using <code>git clone REPO_NAME.git</code></li>
 <li>inside in the project run <code>npm install</code></li>
 <li>set configuration in the config/config.js</li>
 <li>after installastion run <code>npm start</code></li>
