@@ -2,8 +2,9 @@
 const axios = require("axios");
 const urlTemplate = require("url-template");
 const async = require("async");
-const KLOH_API_POST = process.env.KLOH_API_POST_URL;
-const KLOH_API_GET = process.env.KLOH_API_GET_URL;
+const config = require("../config/congif");
+const KLOH_API_POST = config.KLOH_API_POST_URL;
+const KLOH_API_GET = config.KLOH_API_GET_URL;
 
 module.exports = {
   index(req, res){

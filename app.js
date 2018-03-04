@@ -5,7 +5,8 @@ const app = express();
 const routes = require("./route/index");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
-const PORT = process.env.PORT || 3000;
+const config = require("./config/congif");
+const PORT = config.PORT || 3000;
 
 // use pug as template engine, server-side rendering
 app.set("view engine", "pug");
