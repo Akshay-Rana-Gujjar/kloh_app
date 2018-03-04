@@ -11,33 +11,27 @@ block content
               span.card-title 
                 h5 {{activity.title}} {{test}}
             .card-content
-              p
-                .row
-                  .col.m1.s1
-                    i.material-icons(title="Event Host") person
-                  .col.m1.s1
-                    | :                  
-                  .col.m10.s10
-                    .chip
-                      img(ng-src="{{activity.ownerProfileImageUrl}}", alt="Host")
-                      | {{activity.ownerName}}
-                
-                  //- div.col.l12.m6.s12
-                  
-                  .col.m1.s1
-                    i.material-icons(title="Time") access_time
-                  .col.m1.s1 :
-                  .col.m10.s10 {{activity.activityTime.activityDateString}}
+              
 
-                  //- div.col.l12.m6.s12
-                  
-                  .col.m1.s1
-                    i.material-icons(title="Location") location_on
-                  .col.m1.s1 :
-                  .col.m10.s10 {{activity.location.locality}}, {{activity.location.city}}
+              .row
+                .col.s2
+                  i.material-icons.icon-color(title="Location") location_on
+                .col.s10 {{activity.location.locality}}, {{activity.location.city}}
+              .row
+                .col.s2
+                  i.material-icons.icon-color(title="Time") access_time
+                .col.s10 {{activity.activityTime.activityDateString}}
+                
             .card-action
-              a.center(href='#') Join
-              //- a(href="#") More Details
+                .col.s3
+                    img.responsive-img.bordered(ng-src="{{activity.ownerProfileImageUrl}}", alt="Host")
+                .col.s6.host-container
+                  div.grey-text.darken-text-2.host-title Hosted by 
+                  div.host-name {{activity.ownerName}}
+
+                .col.s3
+                  a() Join
+                //- a(href="#") More Details
 
 
 

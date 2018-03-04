@@ -17,3 +17,16 @@
 a.card-link{
   color: #000000b3 !important;
 }
+img.bordered{
+  border:1px solid #d3d3d3
+}
+
+.host-container > .host-title{
+  font-size: 65%;
+}
+.host-container > .host-name{
+  font-size: 85%;
+}
+.icon-color{
+  color: #00d1a2;
+}
