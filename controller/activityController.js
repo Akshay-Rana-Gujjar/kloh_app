@@ -19,8 +19,9 @@ module.exports = {
       return res.send(resData);
     })
     .catch(function(err){
-      let errorCode = err.response.status || 500, 
-      errorText = err.response.statusText || "api error";
+      let errorCode = 500, 
+      errorText = "api error";
+      console.log(err);
       return res.status(errorCode).send(errorText);
     });
 
