@@ -1,6 +1,5 @@
 const express = require("express");
 const path = require("path");
-const dotenv = require("dotenv").config();
 const app = express();
 const routes = require("./route/index");
 const bodyParser = require("body-parser");
@@ -22,6 +21,9 @@ app.use(bodyParser.json());
 
 // logging all requests
 app.use(morgan('tiny'));
+
+// google map api
+app.locals.GOOGLE_MAP_API = config.GOOGLE_MAP_API_KEY;
 
 app.use("/" , routes);
 
