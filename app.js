@@ -25,6 +25,6 @@ app.use(morgan('tiny'));
 
 app.use("/" , routes);
 
-app.listen(PORT, function(){
+app.listen(process.env.PORT || PORT, function(){
 	console.log("server running!! :D");
 });
