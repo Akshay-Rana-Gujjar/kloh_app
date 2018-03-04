@@ -22,8 +22,13 @@ app.use(bodyParser.json());
 // logging all requests
 app.use(morgan('tiny'));
 
-// google map api
-app.locals.GOOGLE_MAP_API = config.GOOGLE_MAP_API_KEY;
+// pass google map api key
+app.use(function(req, res, next) {
+  res.locals.GOOGLE_MAP_API_KEY = config.GOOGLE_MAP_API_KEY;
+  next();
+});
+
+
 
 app.use("/" , routes);
 
