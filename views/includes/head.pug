@@ -2,6 +2,12 @@ head
   meta(charset="UTF-8")
   meta(name="viewport", content="width=device-width, initial-scale=1.0")
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  //- Chrome, Firefox and Opera
+  meta( name="theme-color" content="#05ab8b")
+  //-  Windows Phone
+  meta( name="msapplication-navbutton-color" content="#4285f4")
+  //-  iOS Safari
+  meta( name="apple-mobile-web-app-status-bar-style" content="#4285f4")
   title= title || "Kloh App"
   link(rel="shortcut icon", href="https://kloh.in/images/favicon.ico", type="image/x-icon")
   script(type="text/javascript" src="https://unpkg.com/angular@1.6.5/angular.min.js")
@@ -14,7 +20,7 @@ head
   link( href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
   link(rel="stylesheet", href="/stylesheets/app.css")
   script(src="https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js")
-  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvjaXCUG0sgZjwlDBH3NtN5WwB2ef-I0A")
+  script( async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvjaXCUG0sgZjwlDBH3NtN5WwB2ef-I0A")
 
   block css
   block headJs     

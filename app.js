@@ -5,6 +5,7 @@ const app = express();
 const routes = require("./route/index");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
+const PORT = process.env.PORT || 3000;
 
 // use pug as template engine, server-side rendering
 app.set("view engine", "pug");
@@ -23,6 +24,6 @@ app.use(morgan('tiny'));
 
 app.use("/" , routes);
 
-app.listen("3000", function(){
+app.listen(PORT, function(){
 	console.log("server running!! :D");
 });

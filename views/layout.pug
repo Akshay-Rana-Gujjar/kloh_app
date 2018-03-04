@@ -3,27 +3,28 @@ html(lang="en" ng-app="KlohApp")
   include ./includes/head
 
   body
+  
     nav
       .nav-wrapper.nav-background
         
-          a.brand-logo(href='/') 
-            img.nav-logo-image(src="https://kloh.in/images/logo-kloh-header.jpg", alt="Kloh")
-          a.button-collapse(href='#', data-activates='mobile-hamburg')
-            i.material-icons menu
-          ul#nav-mobile.right.hide-on-med-and-down
-            li
-              a(href='#') Events
-            li
-              a(href='#') Blog
-            li
-              a(href='#') Login
-          ul#mobile-hamburg.side-nav
-            li
-              a(href='#') Events
-            li
-              a(href='#') Blog
-            li
-              a(href='#') Login
+        a.brand-logo(href='/') 
+          img.nav-logo-image(src="https://kloh.in/images/logo-kloh-header.jpg", alt="Kloh")
+        a.button-collapse(href='#', data-activates='mobile-hamburg')
+          i.material-icons menu
+        ul#nav-mobile.right.hide-on-med-and-down
+          li
+            a(href='#') Events
+          li
+            a(href='#') Blog
+          li
+            a(href='#') Login
+        ul#mobile-hamburg.side-nav
+          li
+            a(href='#') Events
+          li
+            a(href='#') Blog
+          li
+            a(href='#') Login
 
     .container
       block content

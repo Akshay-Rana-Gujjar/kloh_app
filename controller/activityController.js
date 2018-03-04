@@ -38,12 +38,11 @@ module.exports = {
     axios.get(GET_URL)
     .then(function(response){
       let resData = response.data;
-      console.log("resDate =",resData);
-
       return res.render("activity",{result : resData});
     })
     .catch(function(err){
-      console.log("err =",err);
+      console.error(err);
+      return res.status(500).send("Error");
     })
 
 
