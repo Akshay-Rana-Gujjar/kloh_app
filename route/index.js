@@ -6,9 +6,7 @@ const activityController = require("../controller/activityController");
 
 route.get("/", activityController.index);
 
-route.get("/activity/:activity_id", function(req, res){
-
-});
+route.get("/activity/:activity_id", activityController.getActivity);
 
 route.post("/activity", activityController.getAllActivity);
 

@@ -4,44 +4,45 @@ block content
   div(ng-controller="listsController")
     .row
       .col.m12.l4(ng-repeat="activity in activities")
-        .card.medium.z-depth-5.hoverable
-          .card-image
-            img(ng-src='{{activity.imageUrl}}')
-            span.card-title 
-              h5 {{activity.title}}
-          .card-content
-            p
-              .row
-                .col.m1
-                  i.material-icons(title="Event Host") person
-                .col.m1
-                  | :                  
-                .col.m10
-                  .chip
-                    img(ng-src="{{activity.ownerProfileImageUrl}}", alt="Host")
-                    | {{activity.ownerName}}
-              
-                div.col.l12.m6
-                  
-                  .row
-                    .col.m1
-                      i.material-icons(title="Time") access_time
-                    .col.m1
-                      | :
-                    .col.m10
-                      | {{activity.activityTime.activityDateString}}
-                div.col.l12.m6
-                  
-                  .row
-                    .col.m1
-                      i.material-icons(title="Location") location_on
-                    .col.m1
-                      | :
-                    .col.m10
-                      | {{activity.location.locality}}, {{activity.location.city}}
-          .card-action
-            a(href='#') Join
-            a(href="#") More Details
+        a.card-link(href="/activity/{{activity.activityId}}")
+          .card.medium.z-depth-5.hoverable
+            .card-image
+              img(ng-src='{{activity.imageUrl}}')
+              span.card-title 
+                h5 {{activity.title}} {{test}}
+            .card-content
+              p
+                .row
+                  .col.m1
+                    i.material-icons(title="Event Host") person
+                  .col.m1
+                    | :                  
+                  .col.m10
+                    .chip
+                      img(ng-src="{{activity.ownerProfileImageUrl}}", alt="Host")
+                      | {{activity.ownerName}}
+                
+                  div.col.l12.m6
+                    
+                    .row
+                      .col.m1
+                        i.material-icons(title="Time") access_time
+                      .col.m1
+                        | :
+                      .col.m10
+                        | {{activity.activityTime.activityDateString}}
+                  div.col.l12.m6
+                    
+                    .row
+                      .col.m1
+                        i.material-icons(title="Location") location_on
+                      .col.m1
+                        | :
+                      .col.m10
+                        | {{activity.location.locality}}, {{activity.location.city}}
+            .card-action
+              a.center(href='#') Join
+              //- a(href="#") More Details
 
 
 

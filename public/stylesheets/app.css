@@ -3,7 +3,8 @@
 }
 
 .nav-logo-image{
-  height:60px
+  height:60px;
+  margin-left: 25px;
 }
 .card .card-image .card-title{
 
@@ -12,4 +13,7 @@
 .card .card-image .card-title h5{
   font-weight: 700;
   text-shadow: 1px 1px #0000009c;
+}
+a.card-link{
+  color: #000000b3 !important;
 }

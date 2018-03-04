@@ -1,0 +1,60 @@
+extends ./layout
+
+block css
+  link(rel="stylesheet", href="/stylesheets/activity.css")
+
+block content
+  - activity = result.response
+  div.margin-top-30(ng-controller="activityController")
+    .row
+      .col.m12
+        .carousel.carousel-slider(data-indicators="true")
+          .carousel-fixed-item.center
+            h3.white-text.text-shadow #{activity.title}
+    
+          a.carousel-item()
+            img(src='https://lorempixel.com/800/400/food/1')
+          a.carousel-item()
+            img(src='https://lorempixel.com/800/400/food/2')
+          a.carousel-item()
+            img(src='https://lorempixel.com/800/400/food/3')
+          a.carousel-item()
+            img(src='https://lorempixel.com/800/400/food/4')
+    .row
+      .col.m12
+        h3 #{activity.title}
+    .divider
+    .section
+      h5 Location &amp; Time
+      .row
+        .col.l8
+          //- div(map-lazy-load-params="{{googleMapsUrl}}")
+          - location = activity.location.lat + ","+activity.location.lon
+          ng-map( center=location zoom="15")
+            marker(position=location)
+
+        .col.l4
+          div.row
+            span.grey-text.darken-text-2.col.m2
+              i.material-icons(title="Time") access_time 
+            span.col.m10=activity.activityTime.activityDateString
+          div.row
+            span.grey-text.darken-text-2.col.m2
+              i.material-icons(title="Location") location_on 
+            span.col.m10=activity.location.address
+          .row
+            .col.m2
+              img.responsive-img.bordered(src=activity.ownerProfileImageUrl, alt="host")
+            .col.m10
+              div
+                div.grey-text.darken-text-2 Hosted by 
+                div #{activity.ownerName}
+
+    .divider
+    .section
+      h5 Details
+      p #{activity.description}
+
+
+block footJs
+  script(src="/javascripts/activity.js")
