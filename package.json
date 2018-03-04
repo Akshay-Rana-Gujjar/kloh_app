@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Testing kloh app",
   "main": "app.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node app.js"
+  },
   "author": "Akshay Rana Gujjar",
   "license": "ISC",
   "dependencies": {
