@@ -4,7 +4,7 @@ app.controller("listsController", ["$scope", "$http", function ($scope, $http) {
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log("position :", position);
       var lat = position.coords.latitude, lon = position.coords.longitude;
-      getActivityByLocation(lat, lon);
+      // getActivityByLocation(lat, lon);
     });
   };
 
@@ -30,7 +30,7 @@ app.controller("listsController", ["$scope", "$http", function ($scope, $http) {
     })
   };
 
-  // getActivityByLocation(12.971599, 77.594563);
+  getActivityByLocation(12.971599, 77.594563);
 
 
 }])
